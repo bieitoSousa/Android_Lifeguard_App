@@ -8,9 +8,9 @@
 
 ## Download ⏬
 
-Download the executable (apk) at: [Releases](https://github.com/bieitoSousa/AMS)
+Download the executable (apk) at: [Releases](https://github.com/bieitoSousa/Android_Lifeguard_App)
 
-Last Version: [0.0.0](https://github.com/bieitoSousa/AMS)
+Last Version: [0.0.0](https://github.com/bieitoSousa/Android_Lifeguard_App)
 
 ## Changelog 𝌡
 
