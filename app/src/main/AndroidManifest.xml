@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLifeguardApp">
+        <activity android:name=".contentModel.Ovance"></activity>
+        <activity android:name=".contentModel.Ictus" />
+        <activity android:name=".contentModel.CardioRespiratoria" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
