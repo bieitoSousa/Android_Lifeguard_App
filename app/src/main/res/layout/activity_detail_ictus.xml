@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".contentModel.DetailIctus">
+    <TextView
+        android:id="@+id/title_ictus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goToRCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        app:cornerRadius="16dp" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goToOvance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        app:cornerRadius="16dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close"
+            android:backgroundTint="@color/buttonColor"
+            app:cornerRadius="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_ictus_image"
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tv_ictus_desc"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="405dp" />
+
+
+</LinearLayout>

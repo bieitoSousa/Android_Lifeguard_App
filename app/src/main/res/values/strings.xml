@@ -3,4 +3,17 @@
     <string name="RCP">Parada CardioRespiratoria</string>
     <string name="OVACE">Obstrucción de las vía aérea </string>
     <string name="ICTUS">Ictus</string>
+    <string name="RCP_short">RCP</string>
+    <string name="OVACE_short">OVACE</string>
+    <string name="ICTUS_short">ICTUS</string>
+    <string name="btnXML">buton xml</string>
+    <string name="btnLine">buton line</string>
+    <string name="btnMulti">buton multi</string>
+    <string name="btnMulti2">buton multi 2</string>
+    <string name="close">salir</string>
+    <string name="menu">menu</string>
+    <string name="rcp_desc"> descripcion rcp </string>
+    <string name="ovace_desc"> descripcion ovace </string>
+    <string name="ictus_desc"> descripcion ictus </string>
+
 </resources>
