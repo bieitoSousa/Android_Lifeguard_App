@@ -25,7 +25,7 @@ class DetailOvance : AppCompatActivity() {
         var ovaceDesc : TextView = findViewById(R.id.tv_ovace_desc)
         ovaceDesc.setText(R.string.rcp_desc);
         var ovaceImage : ImageView = findViewById(R.id.iv_ovace_image)
-        ovaceImage.setImageResource(R.drawable.ovace_image)
+        ovaceImage.setImageResource(R.drawable.img_ovace)
         goToIctus = findViewById<MaterialButton>(R.id.goToIctus)
         goToIctus.setText(R.string.ICTUS_short)
         goToRCP =findViewById<MaterialButton>(R.id.goToRCP)
