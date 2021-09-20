@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvRCP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            android:visibility="visible"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardRCP"
+                    android:layout_width="@dimen/card_img_size"
+                    android:layout_height="@dimen/card_img_size"
+                    android:src="@drawable/ic_rcp"
+                    android:background="@color/design_default_color_primary"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+                <TextView
+                    android:id="@+id/tvTitleRCP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rcp_title"
+                    android:textSize="@dimen/card_title_text"
+                    android:textColor="@color/design_default_color_secondary"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    app:layout_constraintStart_toEndOf="@id/imgCardRCP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/rcp_desc"
+                    android:textSize="@dimen/card_text"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleRCP"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitleRCP"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleRCP"
+                    app:layout_constraintBottom_toBottomOf="@id/imgCardRCP"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvOVACE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            android:visibility="visible"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardOVACE"
+                    android:layout_width="@dimen/card_img_size"
+                    android:layout_height="@dimen/card_img_size"
+                    android:src="@drawable/ic_ovace"
+                    android:background="@color/design_default_color_primary"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+                <TextView
+                    android:id="@+id/tvTitleOVACE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ovace_title"
+                    android:textSize="@dimen/card_title_text"
+                    android:textColor="@color/design_default_color_secondary"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    app:layout_constraintStart_toEndOf="@id/imgCardOVACE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/ovace_desc"
+                    android:textSize="@dimen/card_text"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleOVACE"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitleOVACE"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleOVACE"
+                    app:layout_constraintBottom_toBottomOf="@id/imgCardOVACE"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvICTUS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            android:visibility="visible"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardICTUS"
+                    android:layout_width="@dimen/card_img_size"
+                    android:layout_height="@dimen/card_img_size"
+                    android:src="@drawable/ic_ictus"
+                    android:background="@color/design_default_color_primary"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+                <TextView
+                    android:id="@+id/tvTitleICTUS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ictus_title"
+                   android:textSize="@dimen/card_title_text"
+                    android:textColor="@color/design_default_color_secondary"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    app:layout_constraintStart_toEndOf="@id/imgCardICTUS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/ictus_desc"
+                    android:textSize="@dimen/card_text"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleICTUS"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitleICTUS"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleICTUS"
+                    app:layout_constraintBottom_toBottomOf="@id/imgCardICTUS"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

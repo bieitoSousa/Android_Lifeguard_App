@@ -26,7 +26,7 @@ class DetailIctus : AppCompatActivity() {
         var ictusDesc : TextView = findViewById(R.id.tv_ictus_desc)
         ictusDesc.setText(R.string.ictus_desc);
         var rcpImage : ImageView = findViewById(R.id.iv_ictus_image)
-        rcpImage.setImageResource(R.drawable.ictus_image)
+        rcpImage.setImageResource(R.drawable.img_ictus)
         goToOvance =findViewById<MaterialButton>(R.id.goToOvance)
         goToOvance.setText(R.string.OVACE_short)
         goToRCP =findViewById<MaterialButton>(R.id.goToRCP)

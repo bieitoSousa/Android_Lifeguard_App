@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bttCardioRespiratoria"
+    <include
+        android:id="@+id/content"
+        layout="@layout/main_content" />
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/RCP"
-        android:gravity="center"
-        />
+        android:layout_gravity="bottom"
+        app:navigationIcon="@drawable/ic_menu"
+        app:menu="@menu/menu"
+        app:hideOnScroll="true"
+        app:fabAnimationMode="scale"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
 
-    <Button
-        android:id="@+id/bttOvance"
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/OVACE"
-        android:gravity="center"
-         />
+        android:src="@drawable/ic_add"
+        android:contentDescription="@string/add"
+        app:layout_anchor="@id/bottom_app_bar"/>
 
-    <Button
-        android:id="@+id/bttIctus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ICTUS"
-        android:gravity="center"
-         />
-
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
