@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="buttonColor">#FF03DAC5</color>
     <color name="buttonMenuColor">#0340DA</color>
+    <color name="color_divider">#1F000000</color>
 </resources>

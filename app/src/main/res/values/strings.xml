@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Android Lifeguard App</string>
+
+    <string name="description_user_photo">Imagen del usuario</string>
+    <string name="sp_first_time">first_time</string>
+    <string name="dialog_title">Registro de usuario</string>
+    <string name="dialog_confirm">Registrar</string>
+    <string name="helper_username">Obligatorio</string>
+    <string name="hint_username">nombre de usuario</string>
+    <string name="sp_username">username</string>
+    <string name="register_success">Usuario registrado</string>
+
     <string name="RCP">Parada CardioRespiratoria</string>
     <string name="OVACE">Obstrucción de las vía aérea </string>
     <string name="ICTUS">Ictus</string>

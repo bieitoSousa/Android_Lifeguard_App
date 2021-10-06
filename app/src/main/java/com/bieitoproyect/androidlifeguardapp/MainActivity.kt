@@ -4,57 +4,78 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import android.widget.Toast
-import com.bieitoproyect.androidlifeguardapp.contentModel.DetailCardioRespiratoria
-import com.bieitoproyect.androidlifeguardapp.contentModel.DetailIctus
-import com.bieitoproyect.androidlifeguardapp.contentModel.DetailOvance
-import com.google.android.material.button.MaterialButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.bieitoproyect.androidlifeguardapp.Controller.ContentController
+import com.bieitoproyect.androidlifeguardapp.contentModel.ContentDetail
+import com.bieitoproyect.androidlifeguardapp.dataModel.Content
+import com.bieitoproyect.androidlifeguardapp.dataModel.ContentAdapter
+import com.bieitoproyect.androidlifeguardapp.dataModel.OnClickListener
+import com.bieitoproyect.androidlifeguardapp.databinding.ActivityMainBinding
 import com.google.android.material.card.MaterialCardView
+import java.io.Serializable
 
 private const val TAG = "MyActivity"
 
-class MainActivity : AppCompatActivity()  {
+class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var cvRCP : MaterialCardView
     private lateinit var cvOvance : MaterialCardView
     private lateinit var cvIctus : MaterialCardView
+    private var contentController : ContentController = ContentController()
+    private lateinit var contentAdapter: ContentAdapter
+    private lateinit var linearLayoutManager: RecyclerView.LayoutManager
+
+    private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        instance()
-        action()
+        writeContent()
     }
-    private fun action() {
-        cvRCP.setOnClickListener {
-            Log.i(TAG, "Boton bttCardioRespiratoria pulsado")
-            sendMessage(" Accion Boton bttCardioRespiratoria pulsado")
-            val detailCR = Intent(this, DetailCardioRespiratoria::class.java)
-            startActivity(detailCR)
-        }
-        cvOvance.setOnClickListener {
-            Log.i(TAG, "Boton bttOvance pulsado")
-            sendMessage("Accion Boton bttOvance pulsado")
-            val detailOV = Intent(this, DetailOvance::class.java)
-            startActivity(detailOV)
-        }
-        cvIctus.setOnClickListener{
-            Log.i(TAG, "Boton bttIctus pulsado")
-            sendMessage("Accion Boton bttIctus pulsado")
-            val detailIT = Intent(this, DetailIctus::class.java)
-            startActivity(detailIT)
-        }
-    }
-
-    private fun instance() {
-        cvRCP = findViewById(R.id.cvRCP)
-        cvOvance = findViewById(R.id.cvOVACE)
-        cvIctus = findViewById(R.id.cvICTUS)
-    }
-
 
     private fun sendMessage(message: String) {
         Toast.makeText(this,  message, Toast.LENGTH_SHORT).show()
     }
-}
+
+    private fun writeContent() {
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        contentAdapter = ContentAdapter(contentController.getContent(), this)
+        linearLayoutManager = LinearLayoutManager(this)
+
+        binding.content.recyclerView.apply {
+            setHasFixedSize(true)
+            layoutManager = linearLayoutManager
+            adapter = contentAdapter
+        }
+    }
+
+    override fun onClick(content: Content, position: Int) {
+        Toast.makeText(this, "$position: ${content.shortTitle}" , Toast.LENGTH_SHORT).show()
+        goToContentDetail(position)
+    /*
+        when (position) {
+            1 -> goToRCP()
+            2 ->goToICTUS()
+            3 ->goToOVACE()
+        }
+
+         */
+    }
+
+   private fun goToContentDetail( position : Int){
+        val intent = Intent(this, ContentDetail::class.java)
+        var putExtraContent = contentController.getContent(position -1)
+        Log.i("send TO ContentDetail", putExtraContent.toString())
+        intent.putExtra("extra_object", putExtraContent as Serializable)
+        startActivity(intent)
+
+    }
+
+
+
+    }

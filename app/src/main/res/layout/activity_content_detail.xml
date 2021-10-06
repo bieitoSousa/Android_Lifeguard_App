@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".contentModel.DetailCardioRespiratoria">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/goBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/buttonMenuColor"
+            android:paddingRight="100dp"
+            app:icon="@drawable/ic_close"
+            app:cornerRadius="16dp" />
+
+        <ImageButton
+            android:id="@+id/goToMenu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/buttonMenuColor"
+            app:cornerRadius="16dp" />
+
+        <ImageButton
+            android:id="@+id/goEdit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/buttonMenuColor"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/goToPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@color/buttonColor"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_arrow_left"
+            app:cornerRadius="16dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/goToNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:backgroundTint="@color/buttonColor"
+            app:iconGravity="textEnd"
+            app:icon="@drawable/ic_arrow_rigth"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_rcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/buttonMenuColor"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_rcp_image"
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="123dp"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tv_rcp_desc"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
